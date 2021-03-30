@@ -1,20 +1,120 @@
 {% extends "base.html" %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FoodSeller</title>
+<div class="container-fc">
+  <div class="top"><span>FoodCamp</span>
+    <p>Sua comida em 6 minutos</p></div>
 
-    <!-- crafted style for the project -->
-    {% style "/assets/bulma/css/bulma.min.css" %}
-  </head>
-  <body>
-    <div id="app">New div</div>    
-    <img src="/img/warning_clojure.png"></img>
-    
-  </body>
-</html>
+  <!-- <img src="/img/warning_clojure.png" style="width:100px"></img> -->
+  <h1>Primeiro, seu prato</h1>
+
+  <div class="feed-roll">
+    <ul>
+      <li id="11" onclick="" class="selection active">
+	<div>
+	  <img alt="" src="img/1.jpg">
+	</div>
+	<a href="#"></a>
+	<span class="title1">Tradicional Brasileiro</span>
+	<span class="subtitle1">Arroz, feijão tropeiro, </br> salada e carne</span>
+	<span class="price">R$ 14,90</span>
+      </li>
+      <li id="12">
+	<div>
+	  <img alt="" src="img/1.jpg">
+	</div>
+	<a href="#"></a>
+	<span class="title1">Tradicional Brasileiro</span>
+	<span class="subtitle1">Arroz, feijão tropeiro, </br> salada e carne</span>
+	<span class="price">R$ 14,90</span>
+      </li>
+      <li id="13">
+	<div>
+	  <img alt="" src="img/1.jpg">
+	</div>
+	<a href="#"></a>
+	<span class="title1">Tradicional Brasileiro</span>
+	<span class="subtitle1">Arroz, feijão tropeiro, </br> salada e carne</span>
+	<span class="price">R$ 14,90</span>
+      </li>
+    </ul>
+  </div>
+  
+  <h1>Agora, sua bebida</h1>
+
+  <div class="feed-roll">
+    <ul>
+      <li id="21">
+	<div>
+	  <img alt="" src="img/2.png">
+	</div>
+	<a href="#"></a>
+	<span class="title1">Tradicional Brasileiro</span>
+	<span class="subtitle1">Arroz, feijão tropeiro, </br> salada e carne</span>
+	<span class="price">R$ 14,90</span>
+      </li>
+      <li id="22">
+	<div>
+	  <img alt="" src="img/2.png">
+	</div>
+	<a href="#"></a>
+	<span class="title1">Tradicional Brasileiro</span>
+	<span class="subtitle1">Arroz, feijão tropeiro, </br> salada e carne</span>
+	<span class="price">R$ 14,90</span>
+      </li>
+      <li id="l23">
+	<div>
+	  <img alt="" src="img/2.png">
+	</div>
+	<a href="#"></a>
+	<span class="title1">Tradicional Brasileiro</span>
+	<span class="subtitle1">Arroz, feijão tropeiro, </br> salada e carne</span>
+	<span class="price">R$ 14,90</span>
+      </li>
+
+    </ul>
+  </div>
+
+  <h1>Por fim, sua sobremesa</h1>
+
+  <div class="feed-roll">
+    <ul>
+      <li id="l31">
+	<div>
+	  <img alt="" src="img/3.png">
+	</div>
+	<a href="#"></a>
+	<span class="title1">Tradicional Brasileiro</span>
+	<span class="subtitle1">Arroz, feijão tropeiro, </br> salada e carne</span>
+	<span class="price">R$ 14,90</span>
+      </li>
+      
+      <li id="l32">
+	<div>
+	  <img alt="" src="img/3.png">
+	</div>
+	<a href="#"></a>
+	<span class="title1">Tradicional Brasileiro</span>
+	<span class="subtitle1">Arroz, feijão tropeiro, </br> salada e carne</span>
+	<span class="price">R$ 14,90</span>
+      </li>
+
+      <li id="l33">
+	<div>
+	  <img alt="" src="img/3.png">
+	</div>
+	<a href="#"></a>
+	<span class="title1">Tradicional Brasileiro</span>
+	<span class="subtitle1">Arroz, feijão tropeiro, </br> salada e carne</span>
+	<span class="price">R$ 14,90</span>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p class="foot"><span>Selecione os 3 itens <br> para fechar seu pedido</span></p>
+  </div>
+
+</div>
 {% endblock %}
+
