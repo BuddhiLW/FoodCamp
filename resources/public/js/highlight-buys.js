@@ -1,15 +1,15 @@
-let selectedDish = document.getElementsByClassName("dish");
+let selected = document.getElementsByClassName("selection");
 // let activeImages = document.getElementsByClassName("active");
-let buyImagesDish = document.getElementsByClassName("buyDish");
+let buyImages = document.getElementsByClassName("buy");
 
-for (var i=0;  i < selectedDish.length; i++){
+for (var i=0; i < selected.length; i++){
 // Variable responsible to count selected items in one of the rolls
-    selectedDish[i].addEventListener("click", function(){
-	if (buyImagesDish.length > 0){
-	    buyImagesDish[0].classList.remove("buyDish");
+    selected[i].addEventListener("click", function(){
+	if (buyImages.length > 0){
+	    buyImages[0].classList.remove("buy");
 	    // this.classList.remove("active");
 	}
-	this.classList.add("buyDish");
+	this.classList.add("buy");
 	// selection_index = selection_index + 1;
     });
 };

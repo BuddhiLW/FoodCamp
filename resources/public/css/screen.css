@@ -195,23 +195,27 @@ li span{
 .foot{
     height:61px;
     width:364px;
-    box-sizing:content-box;
     background-color:#CBCBCB;
     margin: auto auto;
     line-height: 23px;
     border-radius: 50px;
     display: flex;
-    flex-direction: column;
-    align-itens:center;
-    text-align: center;
-    justify-content: space-between;
+    justify-content: center;
+    align-items:center;
+    color:#FFF;
+    font-family: Roboto;
+    font-size: 20px;
 }
 
+.foot span{
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
 
 /* CSS for selection dynamics */
---foot-color: #FAF;
 
-.buyDish{
+.buy{
     border:4px solid green;
 }
 
@@ -221,4 +225,7 @@ li span{
 
 .buyDessert{
     border:4px solid blue;
+}
+.order{
+    background-color: darkgreen;
 }
