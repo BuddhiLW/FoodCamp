@@ -1,17 +1,16 @@
 let selectedDessert = document.getElementsByClassName("dessert");
-// let activeImages = document.getElementsByClassName("active");
 let buyImagesDessert = document.getElementsByClassName("buyDessert");
-// let footerStyle = document.getElementsByClassName("footer");
+let showDessert = document.getElementsByClassName("showDessert");
 
 for (var k=0; k < selectedDessert.length; k++){
     // Variable responsible to count selected items in one of the rolls
     selectedDessert[k].addEventListener("click", function(){
 	if (buyImagesDessert.length > 0){
 	    buyImagesDessert[0].classList.remove("buyDessert");
-	    // this.classList.remove("active");
+	    showDessert[0].classList.remove("showDessert");
 	}
 	this.classList.add("buyDessert");
-	// selection_index = selection_index + 1;
+	this.getElementsByClassName("animation-hidden")[0].classList.add("showDessert");
     });
 };
 
