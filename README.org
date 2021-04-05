@@ -68,7 +68,7 @@ lein run
 
 + The error.html appears only in case the lein run fails.
 
-+ The project have been written, though, in the [[file:resources/html/about.html::{% extends "base.html" %}][about.html]] file. You may notice something different in the *head* tags. It happens that using Selmer (a Clojure library) we can use a standardized block of html code and call it wherever we want.
++ The project have been written, though, in the about.html file. You may notice something different in the *head* tags. It happens that using Selmer (a Clojure library) we can use a standardized block of html code and call it wherever we want.
 
 The command
 #+begin_example
@@ -150,7 +150,7 @@ So, if you want to manually open the project, locally, you could  use those snip
 **** Highlight functionalities
 - For each selection type (main dish, drink and desert) it was made a little js file (doing structurely the same thing).
 **** Highlight all
-- [[file:resources/public/js/highlight-all.js::for (var m = 0; m < selectedDessert.length; m++) {][highlight-all.js]] file activates the logical css-response to selecting all three food options. 
+- highlight-all.js file activates the logical css-response to selecting all three food options. 
 **** Order Confirmation
 - CSS for the confirmation style-change - a pop-up like behaviour, but controled by html/css/js. 
 ** License
