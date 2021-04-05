@@ -1,0 +1,160 @@
+* experiment-luminus
+  :PROPERTIES:
+  :CUSTOM_ID: experiment-luminus
+  :END:
+Generated using Luminus version "3.98", using Leiningen (a Clojure templating system and more).
+** Prerequisites
+   :PROPERTIES:
+   :CUSTOM_ID: prerequisites
+   :END:
+*** Leiningen
+You will need [[https://github.com/technomancy/leiningen][Leiningen]] 2.0 or above installed.
+The instalation is quite simple.
+**** From the official website,
+1. Download the [[https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein][lein script]] (or on Windows [[https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein.bat][lein.bat]])
+2. Place it on your $PATH where your shell can find it (eg. ~/bin)
+3. Set it to be executable (chmod a+x ~/bin/lein)
+4. Run it (lein) and it will download the self-install package
+
+** Running
+   :PROPERTIES:
+   :CUSTOM_ID: running
+   :END:
+To start a web server for the application, run:
+
+#+begin_example
+  lein run 
+#+end_example
+
+** Navigating through the directories
+
+#+begin_src shell
+  tree -L 3 -d #3
+#+end_src
+
+As our output, we get this bit:
+#+begin_export
+|-- resources
+|   |-- docs
+|   |-- html
+|   `-- public
+|       |-- css
+|       |-- img
+|       `-- js
+#+end_export
+
+Here's where eveything is, relatared to this particular project.
+*** HTML folder
+- In /html:
+#+begin_src shell
+  tree
+#+end_src
+
+#+begin_export 
+.
+|-- about.html
+|-- base.html
+|-- error.html
+`-- home.html
+#+end_export
+
++ If you run have run
+
+#+begin_src shell
+lein run
+#+end_src
+
+-> You would start in the *home* page.
+
++ The error.html appears only in case the lein run fails.
+
++ The project have been written, though, in the [[file:resources/html/about.html::{% extends "base.html" %}][about.html]] file. You may notice something different in the *head* tags. It happens that using Selmer (a Clojure library) we can use a standardized block of html code and call it wherever we want.
+
+The command
+#+begin_example
+{% extends "base.html" %}
+#+end_example
+
+calls the [[file:resources/html/base.html::<script src="js/highlight-buys-dessert.js"></script>][base.html]], where we find these two pieces of code which standardize the css and javascript on other files, in just one call.
+
+**** CSS calls:
+#+begin_example
+  <!-- styles -->
+  {% style "/assets/bulma/css/bulma.min.css" %}
+  {% style "/assets/material-icons/css/material-icons.min.css" %}
+  {% style "/css/reset.css" %}
+  {% style "/css/screen.css" %}
+  {% style "/css/dynamic.css" %}
+  {% style "/css/buy-confirmation.css" %}
+#+end_example
+
+**** JavaScript calls:
+#+begin_example
+  <!-- scripts -->
+
+  <script type="text/javascript">
+    (function() {
+    var burger = document.querySelector('.burger');
+    var nav = document.querySelector('#' + burger.dataset.target);
+    burger.addEventListener('click', function() {
+    burger.classList.toggle('is-active');
+    nav.classList.toggle('is-active');
+    });
+    })();
+  </script>
+  <script src="js/highlight-buys-drink.js"></script>
+  <script src="js/highlight-buys-dessert.js"></script>
+  <script src="js/highlight-all.js"></script>
+  <script src="js/order-confirm.js"></script>
+#+end_example
+
+So, if you want to manually open the project, locally, you could  use those snippets on the header and foot of the about.html file. And, everything should work.
+
+*I advise using the Leiningen build, though. Much simpler.*
+
+*** CSS folder
+#+begin_src shell
+  tree
+#+end_src
+
+#+begin_export 
+.
+|-- buy-confirmation.css
+|-- dynamic.css
+|-- reset.css
+`-- screen.css
+#+end_export
+**** screen.css
+  - It's the layout for home (first ~ 20 lines);
+  - The rest (>20 line) have the static css for the about.html/.  
+**** dynamic.css
+  - CSS used to make the thumbnail green, on click;
+  - Make the :white_check_mark: appear on the bottom of the item;
+**** buy-confirmation.css
+  - CSS for the buy confirmation page, upon selecting all items.
+**** reset.css
+  - self-explanatory: reset the default browser-css.
+*** JS folder
+#+begin_src shell
+  tree
+#+end_src
+
+#+begin_export 
+.
+|-- highlight-all.js
+|-- highlight-buys-dessert.js
+|-- highlight-buys-drink.js
+|-- highlight-buys.js
+`-- order-confirm.js
+#+end_export
+**** Highlight functionalities
+- For each selection type (main dish, drink and desert) it was made a little js file (doing structurely the same thing).
+**** Highlight all
+- [[file:resources/public/js/highlight-all.js::for (var m = 0; m < selectedDessert.length; m++) {][highlight-all.js]] file activates the logical css-response to selecting all three food options. 
+**** Order Confirmation
+- CSS for the confirmation style-change - a pop-up like behaviour, but controled by html/css/js. 
+** License
+   :PROPERTIES:
+   :CUSTOM_ID: license
+   :END:
+Copyright © 2021 FIXME # FoodCamp
