@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8"/>
+
+<head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to experiment-luminus</title>
 
     <!-- styles -->
     {% style "/assets/bulma/css/bulma.min.css" %}
     {% style "/assets/material-icons/css/material-icons.min.css" %}
-    {% style "/css/reset.css" %} 
+    {% style "/css/reset.css" %}
     {% style "/css/screen.css" %}
     {% style "/css/dynamic.css" %}
     {% style "/css/buy-confirmation.css" %}
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- navbar -->
     <nav class="navbar is-info">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/" style="font-weight:bold;">experiment-luminus</a>
-          <span class="navbar-burger burger" data-target="nav-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/" style="font-weight:bold;">experiment-luminus</a>
+                <span class="navbar-burger burger" data-target="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="nav-menu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/" class="navbar-item{% ifequal page "home.html" %} is-active{%endifequal%}">Home</a>
+                    <a href="/about" class="navbar-item{% ifequal page "about.html" %} is-active{%endifequal%}">About</a>
+                </div>
+            </div>
         </div>
-        <div id="nav-menu" class="navbar-menu">
-          <div class="navbar-start">
-            <a href="/" class="navbar-item{% ifequal page "home.html" %} is-active{%endifequal%}">Home</a>
-            <a href="/about" class="navbar-item{% ifequal page "about.html" %} is-active{%endifequal%}">About</a>
-          </div>
-        </div>
-      </div>
     </nav>
 
     <section class="section">
-      <div class="container">
-        {% block content %}
-        {% endblock %}
-      </div>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
     </section>
 
     <!-- scripts -->
-    
+
     <script type="text/javascript">
-      (function() {
-          var burger = document.querySelector('.burger');
-          var nav = document.querySelector('#'+burger.dataset.target);
-          burger.addEventListener('click', function(){
-              burger.classList.toggle('is-active');
-              nav.classList.toggle('is-active');
-          });
-      })();
+        (function() {
+            var burger = document.querySelector('.burger');
+            var nav = document.querySelector('#' + burger.dataset.target);
+            burger.addEventListener('click', function() {
+                burger.classList.toggle('is-active');
+                nav.classList.toggle('is-active');
+            });
+        })();
     </script>
+    <script src="js/highlight-buys.js"></script>
     <script src="js/highlight-buys-drink.js"></script>
     <script src="js/highlight-buys-dessert.js"></script>
     <script src="js/highlight-all.js"></script>
     <script src="js/order-confirm.js"></script>
     {% block page-scripts %}
     {% endblock %}
-  </body>
+</body>
+
 </html>

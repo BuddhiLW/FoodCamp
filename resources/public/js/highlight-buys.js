@@ -18,7 +18,7 @@ for (var i=0; i < selected.length; i++){
 
 
 var productSelection = classFood => (selection =>
-    classFood.forEach.addEventListener("click", toggleBuy(selection)));
+    classFood.forEach.addEventListener("click", toggleProperty(selection)));
 
 var toggleProperty = selection => (property =>
     selection.forEach(element =>
