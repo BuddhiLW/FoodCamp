@@ -33,7 +33,7 @@ To start a web server for the application, run:
 #+end_src
 
 As our output, we get this bit:
-#+begin_shell
+#+begin_src shell
 |-- resources
 |   |-- docs
 |   |-- html
@@ -41,7 +41,7 @@ As our output, we get this bit:
 |       |-- css
 |       |-- img
 |       `-- js
-#+end_shell
+#+end_src
 
 Here's where eveything is, relatared to this particular project.
 *** HTML folder
@@ -50,13 +50,13 @@ Here's where eveything is, relatared to this particular project.
   tree
 #+end_src
 
-#+begin_shell 
+#+begin_src shell
 .
 |-- about.html
 |-- base.html
 |-- error.html
 `-- home.html
-#+end_shell
+#+end_src
 
 + If you run have run
 
@@ -117,13 +117,13 @@ So, if you want to manually open the project, locally, you could  use those snip
   tree
 #+end_src
 
-#+begin_shell 
+#+begin_src shell 
 .
 |-- buy-confirmation.css
 |-- dynamic.css
 |-- reset.css
 `-- screen.css
-#+end_shell
+#+end_src
 **** screen.css
   - It's the layout for home (first ~ 20 lines);
   - The rest (>20 line) have the static css for the about.html/.  
@@ -139,14 +139,14 @@ So, if you want to manually open the project, locally, you could  use those snip
   tree
 #+end_src
 
-#+begin_shell 
+#+begin_src shell 
 .
 |-- highlight-all.js
 |-- highlight-buys-dessert.js
 |-- highlight-buys-drink.js
 |-- highlight-buys.js
 `-- order-confirm.js
-#+end_shell
+#+end_src
 **** Highlight functionalities
 - For each selection type (main dish, drink and desert) it was made a little js file (doing structurely the same thing).
 **** Highlight all
