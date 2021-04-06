@@ -10,6 +10,8 @@ var footerChange = foot => counter => message =>
 	message.innerHTML = "Fechar pedido";
     }) : "no");
 
+
+
 //add event listener in all elements, so to make style change be independent of order of layout selection.
 for (var i = 0; i < selectable.length; i++) {
     for (var j=0; j < selectable[i].length; j++){
@@ -17,4 +19,11 @@ for (var i = 0; i < selectable.length; i++) {
     };   
 }
 
-// footerStyle.getElementsByTagName("span")[0];
+var productSelection = classFood => (selection => property =>
+    classFood.forEach.addEventListener("click", toggleProperty(selection)(property)));
+
+var alert =  p => console.log(p);
+var selectableListeners = s => s.forEach.addEventListener("click", alert);
+var printer = s => s.forEach(alert(s));
+
+//			  footerStyle.getElementsByTagName("span")[0];
