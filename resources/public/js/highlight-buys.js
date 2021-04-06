@@ -17,14 +17,11 @@ for (var i=0; i < selected.length; i++){
 };
 
 
-var productSelection = classFood => (selection =>
-    classFood.forEach.addEventListener("click", toggleProperty(selection)));
+var productSelection = classFood => (selection => property =>
+    classFood.forEach.addEventListener("click", toggleProperty(selection)(property)));
 
 var toggleProperty = selection => (property =>
     selection.forEach(element =>
         (selection.length > 0 ?
          selection[0].classList.remove(property) :
          element.classList.add(property))));
-
-
-			 
