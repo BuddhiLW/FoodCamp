@@ -13,8 +13,8 @@ for (var m=0; m < selected.length; m++){
     });
 };
 
-for (var m=0; m < selectedDrink.length; m++){
-    selectedDrink[m].addEventListener("click", function (){
+for (var i=0; i < selectedDrink.length; i++){
+    selectedDrink[i].addEventListener("click", function (){
         if (combinedVar === 3){
 	    footerStyle[0].classList.add("order");
 	    footerStyleSpan.innerHTML = "Fechar pedido";
@@ -22,8 +22,8 @@ for (var m=0; m < selectedDrink.length; m++){
     });
 };
 
-for (var m=0; m < selectedDessert.length; m++){
-    selectedDessert[m].addEventListener("click", function (){
+for (var j=0; j < selectedDessert.length; j++){
+    selectedDessert[j].addEventListener("click", function (){
         if (combinedVar === 3){
 	    footerStyle[0].classList.add("order");
 	    footerStyleSpan.innerHTML = "Fechar pedido";
